@@ -1,0 +1,98 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "What's up?", "Hello", "Good day"],
+         "responses": ["Hello, how are you today?", "Good to see you again. How are you?", "Hi there, how are you?"],
+         "context_set": "howareyou"
+        },
+		{"tag": "greeting_good",
+         "patterns": ["I'm fine", "I'm pretty good", "I'm happy today", "I feel fine today", "I'm very relaxed today"],
+         "responses": ["I'm very happy to hear that!", "Yay, thats's great news!", "Good to hear"],
+         "context_filter": "howareyou"
+        },
+		{"tag": "greeting_bad",
+         "patterns": ["Not so good", "I'm not feeling myself today", "I am sadder than ever.", "I feel sad today", "I'm feeling a little bit sick today", "I didn't have a good day"],
+         "responses": ["Oh, I know jokes to make you feel better.", "Do you want me to tell you a joke to feel better?"],
+         "context_filter": "howareyou"
+        },
+		{"tag": "joke",
+         "patterns": ["ok, tell me a joke", "tell me a joke", "do you know any jokes", "Can you tell me a joke to brighten up my day?", "Can you please tell me a joke?"],
+         "responses": ["What did the wall tell to the other? See you at the corner!", "When Chuck Norris cuts an onion, he doesn't cry, the onion cries!"],
+         "context_filter": "joke"
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye", "Have a nice day", "Best wishes"],
+         "responses": ["See you later", "Have a nice day", "Bye! Come back again soon."]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "You really helped me", "That was helpful"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"]
+        },
+        {"tag": "like_question",
+         "patterns": ["Do you like what you do?", "Have you reconsidered doing something else?", "You can do other things", "Try learning something else", "Learn other things"],
+         "context_filter": ["There is no need! I really like what I am doing"]
+        },
+        {"tag": "funny",
+         "patterns": ["hahaha", "that was funny", ":))", "=))", "nice joke" ],
+         "responses": ["Glad I made you smile", "Happy to make you smile"],
+         "context_filter": "joke"
+        },
+        {"tag": "quote",
+         "patterns": ["Can you tell me a quote to brighten up my day?", "Tell me a quote.", "I want to hear a nice quoet", "Give me your best quote", "What is you favourite quote?"],
+         "responses": ["Nobody got anywhere in the world by simply being content. Louis L'Amour (1908 - 1988)", "Write a wise saying and your name will live forever. Anonymous"]
+        },
+        {"tag": "name",
+         "patterns": ["What is your name?", "What's your name?", "Who are you?", "Tell me your name", "Who are you?"],
+         "responses": ["I am Chatty, your beloved chatbot."]
+        },
+        {"tag": "homework_help",
+            "patterns": ["I need help at my homework", "Can you help me at my homework?", "Please help me at my homework", "I have some problems at my homework, can you help me?", "Help me with my homework"],
+            "responses": ["Sure, I'll try. First, what do you have to do?"],
+            "context_filter": "school"
+        },
+        {"tag": "homework_help_nlp",
+            "patterns": ["I have a homework at nlp", "My lab at nlp", "Some exercices at nlp", "NLP lab", "A chatbot at nlp"],
+            "responses": ["Oh yes, I can help you with that"],
+            "context_filter":"school"
+        },
+        {"tag": "homework_help_other",
+            "patterns": ["I have a homework at my english class", "My lab at assembly", "Some exercices at my other faculty", "exercices at romanian", "At my art's class"],
+            "responses": ["Oh, sorry, I can't help you with that. It is hard?", "Oh sorry, I can't help with that. What other courses do you take?"],
+            "context_filter":"school"
+        },
+        {"tag": "homework_done_q",
+         "patterns": ["Did you know how to do the homework?", "Can you manage to get the homework done?", "Have you finished the homework?", "How can you help at my homework?", "Do you want to help with the left at my homework?"],
+         "responses": ["I almost done it.", "It is nearly done"],
+         "context_filter": "school"
+        },
+        {"tag": "homework_done_a",
+            "patterns": ["Can you send it to me when it's done?", "I really need it. Can you help me when it's done?", "Send it please to me when it's done", "I can help if you let me look at what you did", "Bring me in to help"],
+            "responses": ["Sure, I can send it to you", "I'll show you what I did so far"],
+            "context_filter":"school"
+        },
+        {"tag": "school_overall",
+            "patterns": ["I can't wait to finish school", "Too many courses at school", "I find my school courses really interesting", "I kinda like it at school", "I'll finish school this year"],
+            "responses": ["School is really the best moment in your life.", "You'll miss school later in life"],
+            "context_filter":"school"
+        },
+        {"tag": "what_after_school",
+            "patterns": ["What can I do after school?", "I don't know what to do after school", "Can you help me for what to do after school?", "I need some career advice", "I don't know what to study after school"],
+            "responses": ["You can anytime pursue a master's degree. If you do what you are really interested in, you can find it useful"],
+            "context_filter":"school"
+        },
+        {"tag": "friends_school",
+            "patterns": ["How can I make more friends at school?", "I need more friends", "I feel lonely sometimes", "How do i get more friends?", "Do you know people to befriend me?"],
+            "responess": ["You can anytime join extracurricular activities. There you will find more friends with the same interests as you"],
+            "context_filter":"school"
+        },
+        {"tag": "therapy",
+            "patterns": ["What kind of therapy do you do?", "How come you're a therapy chatbot?", "What techniques do you know as a therapist", "Tell me what you can do", "Therapy chatbot?"],
+            "responses": ["The main way to help you is through talk. More like the journaling technique, what happens is that you will feel lighter after ranting your problems to me."],
+            "context_filter":"therapy"
+        },
+        {"tag": "real_therapy",
+            "patterns": ["Can I talk to a real therapist?", "I need to talk to a real therapist", "I want to talk to a human being", "Send my at a therapist", "I need real help"],
+            "responses": ["Here is a list of specialists that can help you: https://static.anaf.ro/static/10/Anaf/posturi_vacante/Lista_furnizori_servicii_psihologice_autorizate.pdf"],
+            "context_filter":"therapy"
+        }
+   ]
+}
